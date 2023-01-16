@@ -34,4 +34,7 @@ export class CartserviceService {
   getCart():Cart{
     return this.cart;
   }
+  resetCart(){
+    this.cart=new Cart();
+  }
 }

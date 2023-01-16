@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FoodItemListComponent } from './components/food-item-list/food-item-list.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
   {
-    path: '', component: AppComponent
+    path: '', component: HomeComponent
   },
   {
     path: 'search/:searchTerm', component: FoodItemListComponent

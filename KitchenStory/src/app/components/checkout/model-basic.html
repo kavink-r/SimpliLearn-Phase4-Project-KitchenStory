@@ -1,0 +1,14 @@
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Payment-Gateway</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<a class="payment-confirmation-message">Confirm purchase of cart items for the total amount of:</a><br>
+		<a class="payment-confirmation-amount" style="font-size: 5rem;text-align: center;">₹{{cart.totalprice}}</a>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-success" (click)="modal.close('Save click')">Confirm Payment</button>
+	</div>
+</ng-template>
+<button class="btn btn-warning sm-btn" (click)="open(content)">Pay Amount</button>

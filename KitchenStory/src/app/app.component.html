@@ -1,33 +1,26 @@
 <div class="whole-container">
   <div class="top-container">
-    <div class="brand-name">
-      <div class="logo-container">
-        <img src="/assets/chef1.png" width="80" height="80">
+      <div class="brand-name">
+          <div class="logo-container">
+              <img src="/assets/chef1.png" width="80" height="80">
+          </div>
+          <div class="brand_name_container">
+              <p class="brand_name_text">KitchenStory</p>
+          </div>
+          <div class="clear"></div>
       </div>
-      <div class="brand_name_container">
-        <p class="brand_name_text">KitchenStory</p>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div class="login-container">
+      <div class="login-container">
 
-      <button type="button" class="btn btn-outline-warning login_button">Login</button>
-      <div class="login-text">
-        <p>Welcome guest !!</p>
+          <button type="button" class="btn btn-outline-warning login_button">Login</button>
+          <div class="login-text">
+              <p>Welcome guest !!</p>
+          </div>
+          <div class="clear"></div>
       </div>
-      <div class="clear"></div>
-    </div>
   </div>
   <div class="clear"></div>
   <div class="middle-container">
-  <div class="food-item-list">
-   
-    <app-food-item-list></app-food-item-list>
-  </div>
-  <div class="cart-list">
-    <div><a>🛒Cart info:</a></div> 
-    <app-cart-list></app-cart-list>
-  </div>
-  <div class="clear"></div>
+  <router-outlet></router-outlet>
+
 </div>
 </div>

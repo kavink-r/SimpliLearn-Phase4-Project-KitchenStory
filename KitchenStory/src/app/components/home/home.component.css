@@ -1,0 +1,21 @@
+
+.food-item-list {
+    height: 1000px;
+    width: 80%;
+    display: inline;
+    float: left;
+   /*background-color: bisque;*/
+}
+
+.cart-list {
+    height: max-content;
+    width: 20%;
+    display: inline;
+    float: right;
+    /*border-left: 2px solid #ca1515;
+    background-color: coral;*/
+}
+.cart-list div {
+    margin-top: 1rem;
+    text-align: center;
+}

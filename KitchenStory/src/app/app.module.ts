@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { HomeComponent } from './components/home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdModalBasic } from './components/checkout/model-basic';
 
 
 @NgModule({
@@ -17,7 +20,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     FoodItemListComponent,
     CartListComponent,
     NotFoundComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,
@@ -25,7 +29,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     BrowserModule,    
     RatingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+    NgbdModalBasic
     
   ],
   providers: [],

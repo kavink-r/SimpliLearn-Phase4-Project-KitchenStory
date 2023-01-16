@@ -1,1 +1,31 @@
-<p>checkout works!</p>
+<button class="btn btn-warning" routerLink="">Go Home</button>
+<div class="clear"></div>
+<div *ngIf="cart && cart.items.length > 0" class="container">
+    <a>Your Cart Items 🛒</a>
+    <ul>
+      <li *ngFor="let cartItem of cart.items">
+        <div>
+          <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+        </div>
+        <div>
+          <a routerLink="/food/{{ cartItem.food.id }}">
+            {{ cartItem.food.name }}
+          </a>
+        </div>
+        <div>
+          <a>Qty: {{cartItem.quantity}}</a>
+        </div>
+        <div>Price: ₹{{ cartItem.price }}</div>
+        
+      </li>
+    </ul>
+    
+  </div>
+  <div class="checkout">
+    <div>
+      <div class="foods-count">{{ cart.items.length }}</div>
+      <div class="total-price">₹{{ cart.totalprice }}</div>
+      <ngbd-modal-basic></ngbd-modal-basic>
+    </div>
+  </div>
+  <div class="clear"></div>
