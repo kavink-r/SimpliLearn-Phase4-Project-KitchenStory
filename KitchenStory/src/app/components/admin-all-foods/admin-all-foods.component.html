@@ -1,0 +1,52 @@
+<h3>Master list of foods</h3>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Cook Time</th>
+      <th>Price</th>
+      <th>Origins</th>
+      <th>Stars</th>
+      <th>ImageUrl</th>
+      <th>Tags</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+
+    <tr *ngFor="let food of foods">
+      <td>{{ food.id }}</td>
+      <td>{{ food.name }}</td>
+      <td>{{ food.cookTime }}</td>
+      <td>₹ {{ food.price }}</td>
+      <td>
+        <span *ngFor="let origin of food.origins">
+          {{ origin }}
+        </span>
+      </td>
+      <td>
+        <star-rating
+          [value]="food.stars"
+          [totalstars]="5"
+          checkedcolor="red"
+          uncheckedcolor="black"
+          size="20px"
+          [readonly]="true"
+        ></star-rating>
+      </td>
+      <td>{{ food.imageUrl }}</td>
+      <td>
+        <span *ngFor="let tag of food.tags">
+          {{ tag }}
+        </span>
+      </td>
+      <td><img src="{{ food.imageUrl }}" alt="food image" /></td>
+      <td class="center">
+        <span class="material-symbols-outlined" (click)="deleteFood(food)">
+          delete
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>

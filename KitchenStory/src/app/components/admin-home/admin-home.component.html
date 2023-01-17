@@ -1,0 +1,20 @@
+<div class="nav">
+ 
+    <div class="nav-title">
+      <h1>Welcome Admin</h1>
+    </div>
+  
+    <div class="nav-menu">
+      <ul>
+        <li  [routerLink]="['./all-foods']" [routerLinkActive]="['active-link']" >All Foods</li>
+        <li  [routerLink]="['./add-food']" [routerLinkActive]="['active-link']" >Add Food</li>
+        <li  [routerLink]="['./change-password']" [routerLinkActive]="['active-link']" >Change Password</li>
+        <li><span (click)=" logout()" class="material-symbols-outlined">
+          logout
+          </span></li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  
+  

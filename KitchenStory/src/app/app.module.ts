@@ -12,6 +12,11 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalBasic } from './components/checkout/model-basic';
+import { LoginComponent } from './components/login/login.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { AdminAllFoodsComponent } from './components/admin-all-foods/admin-all-foods.component';
+import { AdminAddFoodComponent } from './components/admin-add-food/admin-add-food.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
 
 
 @NgModule({
@@ -21,7 +26,12 @@ import { NgbdModalBasic } from './components/checkout/model-basic';
     CartListComponent,
     NotFoundComponent,
     CheckoutComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    AdminHomeComponent,
+    AdminAllFoodsComponent,
+    AdminAddFoodComponent,
+    ChangePasswordComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,44 @@
+<div class="page">
+    <h3>Add Food Form</h3>
+    <div class="form">
+        <form [formGroup]="addFoodForm" (ngSubmit)="addfood()">
+
+            <span *ngIf="id && id.invalid && id.touched">This id is invalid</span>
+            <input type="number" placeholder="ID" formControlName="id" />
+            <span *ngIf="name && name.invalid && name.touched">This name is invalid</span>
+            <input type="text" placeholder="Name" formControlName="name" />
+            <span *ngIf="price && price.invalid && price.touched">This price is invalid</span>
+            <input type="number" placeholder="Price" formControlName="price" />
+            <span *ngIf="cookTime && cookTime.invalid && cookTime.touched">This cookTime is invalid</span>
+            <input type="text" placeholder="Cook Time (00-00)" formControlName="cookTime" />
+
+            <fieldset>
+                <legend>Origins | <span class="material-symbols-outlined" (click)="addOrigins()">add</span></legend>
+                <div formArrayName="origins">
+                <div *ngFor="let originsControl of getControlsOrigins(); let i = index">
+                    <input type="text" [formControlName]="i" placeholder="Origins">
+                    <span class="material-symbols-outlined" (click)="deleteOrigins(i)">delete</span>
+                </div>
+                </div>
+            </fieldset>
+
+            <span *ngIf="stars && stars.invalid && stars.touched">This stars is invalid</span>
+            <input type="number" placeholder="Stars" formControlName="stars" />
+            <span *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched">This imageUrl is invalid</span>
+            <input type="text" placeholder="Image URL" formControlName="imageUrl" />
+
+            <fieldset>
+                <legend>Tags | <span class="material-symbols-outlined" (click)="addTags()">add</span></legend>
+                <div formArrayName="tags">
+                <div *ngFor="let tagsControl of getControls(); let i = index">
+                    <input type="text" [formControlName]="i" placeholder="Tags">
+                    <span class="material-symbols-outlined" (click)="deleteTags(i)">delete</span>
+                </div>
+            </div>
+            </fieldset>
+
+            <input type="hidden" placeholder="Favorite" formControlName="favorite" />
+            <button type="submit" [disabled]="!addFoodForm.valid">Add Food</button>
+        </form>
+    </div>
+</div>

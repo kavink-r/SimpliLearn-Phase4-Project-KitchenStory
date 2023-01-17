@@ -1,0 +1,90 @@
+
+ *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   }
+
+   .nav{
+    background: black;
+    color: white;
+    height: 70px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+   }
+   
+   .nav-title{
+    width: 30%;
+    background: red;
+    padding: 0;
+    text-align: center;
+
+    -webkit-animation: cssAnimation 3s forwards; 
+    animation: cssAnimation 3s forwards;
+   }
+   @keyframes cssAnimation {
+    0%   {opacity: 1; height: auto;}
+    90%  {opacity: 1; height: auto;}
+    100% {opacity: 0; height: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1; height: auto;}
+    90%  {opacity: 1; height: auto;}
+    100% {opacity: 0; height: 0;}
+}
+
+
+   .nav-menu{
+    width: 70%;
+   }
+
+   .nav-menu ul {
+    display: flex;
+    justify-content: flex-end;
+   }
+
+   .active-link{
+    color: #fff !important;
+    font-weight: bold;
+   }
+
+   .nav-menu ul li{
+    padding: 10px;
+    color: #ccc;
+    font-size: 20px;
+    list-style-type: none;
+    cursor: pointer;
+   }
+
+   .nav-menu ul li:hover {
+    color: #fff;
+   }
+  
+
+    /*style for responsive menu*/
+
+    @media screen and (max-width:1000px){
+      .nav{
+        height: auto;
+      }
+    
+      .nav .nav-title{
+        text-align: left;
+        width: 100%;
+      }
+
+      .nav .nav-menu{
+        width: 100%;
+      }
+      .nav .nav-menu ul{
+        justify-content: space-around;
+      }
+
+      .nav .nav-menu ul li{
+        width: 20%;
+        padding: 10px 0px;
+        text-align: center;
+        font-size: 16px;
+      }
+    }
