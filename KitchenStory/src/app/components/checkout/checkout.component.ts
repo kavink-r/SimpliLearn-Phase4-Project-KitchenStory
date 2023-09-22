@@ -15,7 +15,5 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
     this.cart = this.cartservice.getCart();
   }
-  paymentGateway(amt:any){
-    
-  }
+  
 }
